@@ -1,81 +1,47 @@
-Bitcoin Core integration/staging tree
-=====================================
-
-[![Build Status](https://travis-ci.org/bitcoin/bitcoin.svg?branch=master)](https://travis-ci.org/bitcoin/bitcoin)
-
 https://bitcoincore.org
 
-What is Bitcoin?
-----------------
+O que é Bitcoin?
 
-Bitcoin is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. Bitcoin uses peer-to-peer technology to operate
-with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Bitcoin Core is the name of open source
-software which enables the use of this currency.
+Bitcoin é uma moeda digital experimental que permite pagamentos instantâneos para qualquer pessoa, em qualquer lugar do mundo. Bitcoin usa a tecnologia peer-to-peer para operar com nenhuma autoridade central: gerenciamento de transações e de emissão de dinheiro são realizadas coletivamente pela rede. Bitcoin Core é o nome do software de código aberto que permite o uso desta moeda.
 
-For more information, as well as an immediately useable, binary version of
-the Bitcoin Core software, see https://bitcoin.org/en/download, or read the
-[original whitepaper](https://bitcoincore.org/bitcoin.pdf).
+Para mais informações, bem como uma versão imediatamente utilizável, binário do software Bitcoin Core, veja https://bitcoin.org/en/download , ou ler o whitepaper originais .
 
-License
--------
+Licença
 
-Bitcoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
-information or see https://opensource.org/licenses/MIT.
+Bitcoin núcleo é liberado sob os termos da licença MIT. Veja COPYING para mais informações ou ver https://opensource.org/licenses/MIT .
 
-Development Process
--------------------
+Processo de desenvolvimento
 
-The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
-regularly to indicate new official, stable release versions of Bitcoin Core.
+O masterramo é regularmente construído e testado, mas não é garantido para ser completamente estável. Etiquetas são criados regularmente para indicar nova oficial, versões versão estável do Bitcoin Core.
 
-The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
+O fluxo de trabalho contribuição é descrito no CONTRIBUTING.md .
 
-The developer [mailing list](https://lists.linuxfoundation.org/mailman/listinfo/bitcoin-dev)
-should be used to discuss complicated or controversial changes before working
-on a patch set.
+O desenvolvedor mailing list deve ser usado para discutir mudanças complicadas ou controversos antes de trabalhar em um conjunto de patches.
 
-Developer IRC can be found on Freenode at #bitcoin-core-dev.
+Desenvolvedor IRC pode ser encontrado na rede Freenode em # bitcoin-core-dev.
 
-Testing
--------
+ensaio
 
-Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test on short notice. Please be patient and help out by testing
-other people's pull requests, and remember this is a security-critical project where any mistake might cost people
-lots of money.
+Teste e revisão de código é o gargalo para o desenvolvimento; temos mais solicitações de pull do que podemos rever e teste em curto prazo. Por favor, seja paciente e ajudar, testando solicitações de pull de outras pessoas, e lembre-se este é um projeto de segurança crítica, onde qualquer erro pode custar pessoas muito dinheiro.
 
-### Automated Testing
+Teste automatizado
 
-Developers are strongly encouraged to write [unit tests](/doc/unit-tests.md) for new code, and to
-submit new unit tests for old code. Unit tests can be compiled and run
-(assuming they weren't disabled in configure) with: `make check`
+Desenvolvedores são encorajados a escrever testes de unidade para o novo código, e de apresentar novos testes de unidade para código antigo. Os testes de unidade pode ser compilado e executar (assumindo que eles não foram desabilitados na configure) com:make check
 
-There are also [regression and integration tests](/qa) of the RPC interface, written
-in Python, that are run automatically on the build server.
-These tests can be run (if the [test dependencies](/qa) are installed) with: `qa/pull-tester/rpc-tests.py`
+Há também testes de regressão e integração da interface RPC, escritos em Python, que são executados automaticamente no servidor de compilação. Estes testes podem ser executados (se as dependências do teste são instalados) com:qa/pull-tester/rpc-tests.py
 
-The Travis CI system makes sure that every pull request is built for Windows, Linux, and OS X, and that unit/sanity tests are run automatically.
+O sistema Travis CI torna-se de que cada solicitação de recebimento é construído para Windows, Linux e OS X, e que os testes de unidade / sanidade são executados automaticamente.
 
-### Manual Quality Assurance (QA) Testing
+Manual de Garantia de Qualidade (QA) Testing
 
-Changes should be tested by somebody other than the developer who wrote the
-code. This is especially important for large or high-risk changes. It is useful
-to add a test plan to the pull request description if testing the changes is
-not straightforward.
+As alterações devem ser testados por alguém que não seja o programador que escreveu o código. Isto é especialmente importante para grandes alterações ou de alto risco. É útil para adicionar um plano de teste para a atração pedido descrição se testar as alterações não é simples.
 
-Translations
-------------
+traduções
 
-Changes to translations as well as new translations can be submitted to
-[Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
+Mudanças a traduções, bem como novas traduções podem ser submetidos a página Transifex do Bitcoin Núcleo .
 
-Translations are periodically pulled from Transifex and merged into the git repository. See the
-[translation process](doc/translation_process.md) for details on how this works.
+Traduções são periodicamente retirado do Transifex e se fundiram para o repositório git. Veja o processo de tradução para obter detalhes sobre como isso funciona.
 
-**Important**: We do not accept translation changes as GitHub pull requests because the next
-pull from Transifex would automatically overwrite them again.
+Importante : Não aceitamos alterações de translação como solicitações de pull GitHub porque o próximo gole Transifex seria automaticamente substituí-los novamente.
 
-Translators should also subscribe to the [mailing list](https://groups.google.com/forum/#!forum/bitcoin-translators).
+Tradutores também deve assinar a lista de discussão .
